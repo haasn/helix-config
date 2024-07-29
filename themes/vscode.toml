@@ -1,0 +1,5 @@
+inherits = "dark_plus"
+
+# Modifications from original
+"ui.linenr"                  = { fg = "dark_gray4" }
+"ui.statusline"              = { fg = "white", bg = "dark_gray3" }
