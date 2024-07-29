@@ -84,8 +84,10 @@ C-q = ":qa"
 tab = "move_parent_node_end"
 S-tab = "move_parent_node_start"
 
-# Misc crap
+# Vim compatibility / convenience
 G = "goto_last_line"
+"^" = "goto_line_start"
+"$" = "goto_line_end"
 
 [keys.select]
 "," = "extend_char_left"
@@ -96,6 +98,8 @@ t = "extend_next_word_end"
 T = "extend_next_long_word_end"
 tab = "extend_parent_node_end"
 S-tab = "extend_parent_node_start"
+"^" = "extend_to_line_start"
+"$" = "extend_to_line_end"
 
 [keys.insert]
 C-s = ":wa"
