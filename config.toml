@@ -1,4 +1,4 @@
-theme = "dark_plus"
+theme = "vscode"
 
 [editor]
 mouse = false
@@ -16,9 +16,10 @@ tab = "all"
 
 [editor.indent-guides]
 render = true
+character = "⸽"
 
-[editor.gutters]
-layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+[editor.statusline]
+right = ["version-control", "diagnostics", "selections", "register", "position", "file-encoding"]
 
 [keys.normal]
 
@@ -34,14 +35,13 @@ i = "move_char_right"
 "A-e" = "jump_view_up"
 "A-i" = "jump_view_right"
 
-# C-,i buffer navigation
-"C-," = "goto_previous_buffer"
-"C-i" = "goto_next_buffer"
+# Tab buffer navigation
+"S-tab" = "goto_previous_buffer"
+"tab" = "goto_next_buffer"
 
 # X -> L
-l = "extend_line_below"
-L = "extend_to_line_bounds"
-A-l = "shrink_to_line_bounds"
+l = "extend_to_line_bounds"
+L = "extend_line_below"
 
 # A -> H
 h = "append_mode"
@@ -50,6 +50,9 @@ H = "insert_at_line_end"
 # , -> J
 j = "keep_primary_selection"
 J = "remove_primary_selection"
+
+# J -> C
+C = "join_selections_space"
 
 # I -> S
 s = "insert_mode"
@@ -80,14 +83,14 @@ X = "copy_selection_on_prev_line"
 C-s = ":wa"
 C-q = ":qa"
 
-# Better smart tab
-tab = "move_parent_node_end"
-S-tab = "move_parent_node_start"
-
 # Vim compatibility / convenience
 G = "goto_last_line"
+V = ["select_mode", "extend_to_line_bounds"]
 "^" = "goto_line_start"
 "$" = "goto_line_end"
+
+# Utility
+"*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
 
 [keys.select]
 "," = "extend_char_left"
@@ -100,6 +103,10 @@ tab = "extend_parent_node_end"
 S-tab = "extend_parent_node_start"
 "^" = "extend_to_line_start"
 "$" = "extend_to_line_end"
+l = "extend_to_line_bounds"
+"*" = ["search_selection", "search_next"]
+C = "join_selections_space"
+G = "goto_last_line"
 
 [keys.insert]
 C-s = ":wa"

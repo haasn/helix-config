@@ -1,0 +1,13 @@
+[[language]]
+name = "gas"
+scope = "source.llvm"
+roots = ["Makefile"]
+file-types = ["S", "s"]
+comment-token = "#"
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["asm-lsp"]
+auto-format = true
+
+[language-server.asm-lsp]
+command = "asm-lsp"
+config = { provideFormatter = true }
