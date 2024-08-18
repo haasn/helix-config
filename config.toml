@@ -21,6 +21,9 @@ character = "⸽"
 [editor.statusline]
 right = ["version-control", "diagnostics", "selections", "register", "position", "file-encoding"]
 
+[editor.smart-tab]
+enable = false
+
 [keys.normal]
 
 # HJKL -> ,AEI
@@ -107,6 +110,8 @@ l = "extend_to_line_bounds"
 "*" = ["search_selection", "search_next"]
 C = "join_selections_space"
 G = "goto_last_line"
+v = "expand_selection"
+V = "shrink_selection"
 
 [keys.insert]
 C-s = ":wa"
